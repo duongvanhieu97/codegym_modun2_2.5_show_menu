@@ -7,7 +7,8 @@ public class Main {
         System.out.println("1. Print the rectangle");
         System.out.println("2. Print the square triangle");
         System.out.println("3. Print isosceles triangle");
-        System.out.println("4. Exit");
+        System.out.println("4. Print isosceles triangle");
+        System.out.println("0. Exit");
         System.out.println("Enter your choice: ");
         menu = scanner.nextInt();
         switch (menu) {
@@ -37,7 +38,21 @@ public class Main {
                     }
                     System.out.println();
                 }
-
+            case 4:
+                System.out.println("Nhập chiều cào");
+                int height = scanner.nextInt();
+                int k = 0;
+                for (int i = 1; i <= height; ++i, k =0) {
+                    for (int j = 1; j <= (height - i) ; ++j) {
+                        System.out.print("  ");
+                    }
+                    while (k != (2 * i -1)) {
+                        System.out.print("* ");
+                        ++k;
+                    }
+                    System.out.println();
+                }
+                System.out.println("\n");
         }
     }
 }
